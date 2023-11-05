@@ -1,7 +1,7 @@
 import * as React from "react";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-// import "./CoinDetail.css";
+import "./Detail.css";
 
 const Togglebtn = ({ settimevalue, settooglebtn, timechart }) => {
   const [alignment, setAlignment] = React.useState("24h");

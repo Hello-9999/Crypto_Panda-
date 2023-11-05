@@ -59,41 +59,43 @@ const PaymentSucess = () => {
   };
 
   return (
-    <div className="sucess m-auto p-4">
-      <h6 className="pt-3 " style={{ textAlign: "center" }}>
-        Payment sucess !!
-      </h6>
-      <p>
-        {" "}
-        "Woohoo! Your payment is a success! 🎉 Thanks for your swift action.
-        You're all set!"
-      </p>
-      <div className="m-auto  sucess-btn" style={{ textAlign: "center" }}>
-        {" "}
-        {loader === false ? (
-          <>
-            {" "}
-            <CircularProgress />
-          </>
-        ) : (
-          <>
-            {" "}
-            <Button
-              onClick={Success}
-              style={{ textAlign: "center", width: "40%" }}
-              className="m-auto"
-              variant="contained"
-            >
+    <div style={{height:"60vh"}}>
+      <div className="sucess p-4  " style={{}}>
+        <h6 className="pt-3 " style={{ textAlign: "center" }}>
+          Payment sucess !!
+        </h6>
+        <p>
+          {" "}
+          "Woohoo! Your payment is a success! 🎉 Thanks for your swift action.
+          You're all set!"
+        </p>
+        <div className="m-auto  sucess-btn" style={{ textAlign: "center" }}>
+          {" "}
+          {loader === false ? (
+            <>
               {" "}
-              Go Back
-            </Button>
-          </>
-        )}{" "}
-      </div>
+              <CircularProgress />
+            </>
+          ) : (
+            <>
+              {" "}
+              <Button
+                onClick={Success}
+                style={{ textAlign: "center", width: "40%" }}
+                className="m-auto"
+                variant="contained"
+              >
+                {" "}
+                Go Back
+              </Button>
+            </>
+          )}{" "}
+        </div>
 
-      <audio id="NotificationSound">
-        <source src={NotificationSound} type="audio/mpeg" />
-      </audio>
+        <audio id="NotificationSound">
+          <source src={NotificationSound} type="audio/mpeg" />
+        </audio>
+      </div>
     </div>
   );
 };

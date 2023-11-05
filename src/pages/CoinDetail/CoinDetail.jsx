@@ -18,7 +18,7 @@ import { Col, InputGroup, Nav, NavItem, Row } from "react-bootstrap";
 // import Market from "../../components/Market/Market";
 // import History from "../../components/CoindetailHistory/History";
 import Togglebtn from "./Togglebtn";
-// import "./CoinDetail.css";
+import "./Detail.css";
 import Overview from "../../components/Overview/Overview";
 // import { ButtonGroup, CircularProgress } from "@mui/material";
 import CurrencyConverter from "../../components/Converte/CurrencyConverter";

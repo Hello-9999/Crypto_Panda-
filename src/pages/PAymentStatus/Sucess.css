@@ -2,11 +2,13 @@
 .sucess{
     background-color: #aba1a1;
     width: 70%;
-    margin-top: 3rem !important;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* margin-top: 5rem !important; */
+    margin: 5rem 3rem;
+    /* position: absolute; */
+    /* top: 30%; */
+    /* left: 50%; */
+
+    /* transform: translate(-50%, -50%); */
     color: black;
 }
 .sucess h6{
