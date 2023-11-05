@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+/*     font-family: 'Roboto', sans-serif;
+
+    font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+*/
+
+.name h6{
+    transition: 0.9s all ease;
+}
+.name:hover h6{
+    text-decoration: underline;
+    color: rgba(0, 153, 255, 0.964);
+}
+.new-coin-header{
+    margin-top: 2.5rem !important;
+    margin-bottom: 2rem;
+}
+.new-coin-header h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color:#ebf1f6 ;
+
+}
+.new-coin-header p{
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #629bc7;
+    
+    
+}
+.new-coin-body img{
+    width: 45px !important;
+}
+.new-coin-body svg{
+    color: #bab9b9;
+}
+.new-coin-body h6{
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+.css-bsph2u-MuiTableCell-root {
+    padding: 10px  !important;
+    
+}
+.new-coin-body span{
+    font-family: 'Lato', sans-serif;
+    color: #a0a0a0;
+}
