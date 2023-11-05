@@ -1,0 +1,74 @@
+.reg-form h4{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+h6.label{
+}
+/* label */
+.signin-form label{
+    font-family: 'Poppins', sans-serif;}
+.signin-form input{
+    font-family: 'Poppins';
+}
+.signin-form .submit{
+    background-color: #FEBF00 ;
+    color: #24243c;
+    font-family: 'Poppins';
+    border: none;
+    text-transform: capitalize;
+    padding: 10px;
+    
+}
+.signin-form .submit:hover{
+    background-color:  #dea90b ;
+    color: #24243c;
+    
+}
+.signin-form .footer  h6{
+    font-family: 'Poppins';
+    color: gray;
+
+}
+.signin-form .footer a{
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+.signin-form .footer a:hover{
+    text-decoration: underline;
+}
+
+@media   (max-width:425px) {
+    .bacground-login {
+        display: none;
+    }
+    .login-form.col-4{
+        width: 100% !important;
+    }
+    .login-form.col-4 div{
+        width: 100% !important;
+    }
+    .css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root {
+        left: 55%;
+    }
+    nav{
+        display: none;
+    }
+}
+@media (min-width:425px) and (max-width:767px) {
+    .bacground-login {
+        display: none;
+    }
+    .login-form.col-4{
+        width: 100% !important;
+    }
+    
+}
+@media (min-width:767px) and (max-width:991px) {
+    .login-form.col-4{
+        width: 40% !important;
+    }
+   
+    
+}
