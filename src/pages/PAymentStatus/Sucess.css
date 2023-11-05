@@ -1,0 +1,21 @@
+
+.sucess{
+    background-color: #aba1a1;
+    width: 70%;
+    margin-top: 3rem !important;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+.sucess h6{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.sucess p{
+    font-size: 1.3rem;
+}
+.sucess-btn span{
+    font-size: 1rem;
+}
