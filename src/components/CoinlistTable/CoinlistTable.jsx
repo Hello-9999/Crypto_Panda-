@@ -32,6 +32,7 @@ import {
   successtoast,
   warningtoast,
 } from "../../Services/toastify";
+import { CircularProgress } from "@mui/material";
 
 const CoinlistTable = ({ currencyUid, currencySign }) => {
   const favroatedata = useSelector((state) => state.Favorite_List);
@@ -412,7 +413,7 @@ const CoinlistTable = ({ currencyUid, currencySign }) => {
         ) : (
           <>
             {" "}
-            <h4>rtt</h4>{" "}
+            <CircularProgress sx={{textAlign:"center"}} />{" "}
           </>
         )}
       </div>
