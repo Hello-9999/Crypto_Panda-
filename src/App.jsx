@@ -1,12 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // import Home from "./pages/Home/Coinlist";
 import Coinlist from "./pages/All Coin/Coinlist";
 import CoinDetail from "./pages/CoinDetail/CoinDetail";
 import CryptoNews from "./components/CoinNews/CryptoNews";
-import Home from "./pages/HOme/Home";
-import Navbar from "./components/Navbar/Navbar";
+// import Home from "./pages/HOme/Home";
+// import Navbar from "./components/Navbar/Navbar";
 import NewCoin from "./pages/New Coin/NewCoin";
 import NewCoinDetails from "./pages/New Coin View Detail/NewCoinDetails";
 import FavorateCoin from "./pages/Favorate Coin/FavorateCoin";
@@ -20,7 +20,7 @@ import Pricealert from "./pages/PriceAlerat/Pricealert";
 import PaymentSucess from "./pages/PAymentStatus/PaymentSucess";
 import PaymentCancel from "./pages/PAymentStatus/PaymentCancel";
 import { ToastContainer } from "react-toastify";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 
 // import ViewTransaction from "./pages/View Transaction/Transaction";
 const id = import.meta.env.VITE_PAYPAL_CLIENTID;

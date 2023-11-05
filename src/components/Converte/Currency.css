@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+/*     font-family: 'Roboto', sans-serif;
+
+    font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+*/
+h4#parent-modal-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* letter-spacing: 1px; */
+ color: #eee5e5cb;
+ margin-bottom: 2rem;
+}
+
+
+
+:where(.css-dev-only-do-not-override-18iikkb).ant-input{
+    height: 5vh;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.fiat_btn button{
+    background-color:rgba(255, 255, 255,.08);    
+    color: rgba(136, 196, 248,0.87);
+    border: none;
+    transition: 0.5s all ease-in;
+    padding: 15px;
+}
+.fiat_btn button:hover{
+    border: 1px solid rgb(101, 103, 99);
+    background-color:rgba(255, 255, 255,.08);
+}
+.css-ci9821 button h6{
+    margin-bottom: 0;
+}
+.css-ci9821 button h6  .symb{
+    font-family: 'Poppins', sans-serif;
+    /* color: red; */
+
+}
+.css-ci9821 button h6 span{
+    font-family: 'Lato', sans-serif;
+    /* color: red; */
+}
