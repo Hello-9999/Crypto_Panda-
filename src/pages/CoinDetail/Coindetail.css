@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+/*     font-family: 'Roboto', sans-serif;
+
+    font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+*/
+ div#ok .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorTop.css-1nvnyqx-MuiPaper-root-MuiDrawer-paper{
+    background-color: #00000024;
+}
+.breadcrumb li.MuiBreadcrumbs-li:hover a{
+    text-decoration: underline;
+    color: blue;
+}
+.breadcrumb li.MuiBreadcrumbs-li a{
+    text-decoration: none;
+    color: #4a90c1;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+.breadcrumb li.MuiBreadcrumbs-li p{
+    color: #ebf1f6;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+.breadcrumb .css-1wuw8dw-MuiBreadcrumbs-separator{
+    color: #4a90c1;
+
+}
+#tooglebtn button h6 b {
+    font-size: 0.80rem;
+    text-transform: capitalize;
+
+
+}
+.coin-detail .rank{
+    padding: 7px !important;
+}
+.coin-detail .rank h6{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+
+}
+/* .coin-detail{
+    /* background-color: #0d1217; */
+/* }  */
+
+body {
+    background-color: #3834343b !important;
+    color: #ffffff7f !important;
+}
+
+.coin-nameDetail b {
+    color: #fff;
+}
+
+.coin-nameDetail span {
+    color: #4a90c1;
+}
+
+.coin-nameDetail h6 {
+    color: #b4acac;
+}
+
+.coin-nameDetail .price {
+    color: #fff;
+
+
+}
+.name img{
+    width: 35px !important;
+}
+
+.coin-nameDetail .ant-space-item button {
+    background-color: #2f3133;
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.1);
+
+    /* color: rgb(0, 0, 0); */
+}
+
+.coin-nameDetail .ant-space-item button span {
+    color: aliceblue;
+}
+
+.valuestatic p {
+    color: #fff;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    /* letter-spacing: 1px; */
+}
+
+.valuestatic .row div p span {
+    /* color: #4a90c1; */
+
+    /* font-size: 0.9rem; */
+    color: #ffffff7f;
+    font-family: 'Poppins', sans-serif;
+}
+
+.info h4 {
+
+    color: #ccc;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+.info_table tr th {
+    /* color: rgba(255, 255, 255, 0.6); */
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.info_table tr :where(.css-dev-only-do-not-override-18iikkb).ant-btn-default {
+    background-color: #262a2f;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.);
+
+}
+
+.toggle button:hover {
+    /* background-color: rgba(25, 30, 35, 1); */
+    /* border: none; */
+    border-color: #2f3133;
+    background-color: gray;
+
+}
+
+.toggle button:active {
+    background-color: red;
+}
+
+.css-1gjgmky-MuiToggleButtonGroup-root button h6 b {
+    color: aliceblue;
+}
+
+.coin-detail .bitconvertor .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.css-1bikn1e-MuiPaper-root-MuiCard-root {
+    background-color: #ffffff1a;
+    border-radius: 15px;
+    color: aliceblue;
+
+}
+
+.coinvalue {
+    height: 5vh;
+    background-color: #ffffff00;
+    height: 8vh;
+}
+
+.coinvalue input {
+    height: 50vh;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff1f;
+    color: #fff;
+}
+
+.converterresult h5 {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.converterresult h5 {
+    color: rgba(209, 225, 233, 0.819);
+}
+
+.resultvalue input {
+    height: 100%;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.bitconvertor h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.price_per {
+    background-color: #ffffff1a;
+    border: none;
+}
+
+.performance-title h3 {
+    font-size: 1.5rem;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: #fefefe;
+    font-weight: bolder;
+
+}
+
+.performance_body p {
+    color: #fefefeaa;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.priceperformance p {
+
+    margin-top: 0;
+    color: #adc9ec;
+}
+
+.priceperformance {
+    border-bottom: 2px solid;
+    padding: 5px;
+}
+
+.performance-title .css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input {
+    color: #8ebae0ba;
+}
+.summary p{
+    color: #5297cd;
+}
+
+@media screen and (max-width:425px) {
+    .container {
+        width: 90% !important;
+    }
+
+    .col-7 {
+        width: 95% !important;
+    }
+    #nav-body .col-5{
+        width: 90%  !important;
+    }
+
+    .coin-detail .coin {
+        flex-direction: column;
+    }
+
+    .valuestatic div {
+        flex-direction: column;
+        gap: 0 !important;
+    }
+    .valuestatic div h6{
+        margin-top: 1rem;
+    }
+    .valuestatic div .col-6{
+        width: 100% !important;
+    }
+
+    #nav-body {
+        flex-direction: column;
+    }
+
+    .priceaname {
+        flex-direction: column;
+    }
+
+    .coin div {
+        width: 100%;
+    }
+
+    .favbtn div {
+        flex-wrap: nowrap !important;
+        /* width: 80%; */
+    }
+
+    .coin-nameDetail .ant-space-item button {
+        width: 60%;
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .name img {
+        width: 35px !important;
+    }
+
+    .info {
+        margin-top: 2rem;
+    }
+
+    .desprice {
+        flex-direction: column;
+    }
+    .css-1bikn1e-MuiPaper-root-MuiCard-root{
+        width: 100%  !important;
+    }
+    .css-ag7rrr-MuiTypography-root {
+    font-size: 1.3rem;
+    }
+    .priceperformance .col-7{
+        width: 100%;
+    }
+    .priceperformance .col-5{
+        width: 100%;
+        text-align: left  !important;
+    }
+    .priceperformance{
+        flex-direction: column;
+    }
+    .desprice .col-4{
+        width: 90%;
+    }
+    .crypto_News div  div{
+
+        width: 100% !important;
+
+    }
+
+
+}
+
+@media (min-width:425px) and (max-width:575px) {
+
+    .container {
+        width: 90% !important;
+    }
+
+    .col-7 {
+        width: 95% !important;
+    }
+    #nav-body .col-5{
+        width: 90%  !important;
+    }
+
+    .coin-detail .coin {
+        flex-direction: column;
+    }
+
+    .valuestatic div {
+        flex-direction: column;
+    }
+
+    #nav-body {
+        flex-direction: column;
+    }
+
+    .priceaname {
+        flex-direction: column;
+    }
+
+    .coin div {
+        width: 100%;
+    }
+
+    .favbtn div {
+        flex-wrap: nowrap !important;
+        width: 80%;
+    }
+
+    .coin-nameDetail .ant-space-item button {
+        width: 60%;
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .name img {
+        width: 35px !important;
+    }
+
+    .info {
+        margin-top: 2rem;
+    }
+
+    .desprice {
+        flex-direction: column;
+    }
+    .css-1bikn1e-MuiPaper-root-MuiCard-root{
+        width: 100%  !important;
+    }
+    .css-ag7rrr-MuiTypography-root {
+    font-size: 1.3rem;
+    }
+    .priceperformance .col-7{
+        width: 100%;
+    }
+    .priceperformance .col-5{
+        width: 100%;
+        text-align: left  !important;
+    }
+    .priceperformance{
+        flex-direction: column;
+    }
+    .desprice .col-4{
+        width: 90%;
+    }
+    .crypto_News div  div{
+
+        width: 100% !important;
+
+    }
+    
+}
+@media (min-width:575px) and (max-width:767px) {
+
+    .container {
+        width: 90% !important;
+    }
+
+    .col-7 {
+        width: 95% !important;
+    }
+    #nav-body .col-5{
+        width: 90%  !important;
+    }
+
+    .coin-detail .coin {
+        flex-direction: column;
+    }
+
+
+
+    #nav-body {
+        flex-direction: column;
+    }
+
+    .priceaname {
+        flex-direction: column;
+    }
+
+    .coin div {
+        width: 100%;
+    }
+
+    .favbtn div {
+        flex-wrap: nowrap !important;
+        width: 80%;
+    }
+
+    .coin-nameDetail .ant-space-item button {
+        width: 60%;
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .name img {
+        width: 35px !important;
+    }
+
+    .info {
+        margin-top: 2rem;
+    }
+
+    .desprice {
+        flex-direction: column;
+    }
+    .css-1bikn1e-MuiPaper-root-MuiCard-root{
+        width: 100%  !important;
+    }
+    .css-ag7rrr-MuiTypography-root {
+    font-size: 1.3rem;
+    }
+    .priceperformance .col-7{
+        width: 100%;
+    }
+    .priceperformance .col-5{
+        width: 100%;
+        text-align: left  !important;
+    }
+    .priceperformance{
+        flex-direction: column;
+    }
+    .desprice .col-4{
+        width: 90%;
+    }
+    .crypto_News div  div{
+
+        width: 100% !important;
+
+    }
+    
+}
+@media (min-width:767px) and (max-width:991px) {
+    .valuestatic .row .col-5{
+        width: 90%;
+    }
+    .valuestatic .row {
+        flex-direction: column;
+    }
+    .info{
+        margin-top: 3rem;
+    }
+    .coin{
+        align-items: center;
+    }
+    .info-table{
+        margin-bottom: 1.5rem !important;
+        /* gap: 5% !important; */
+    }
+    .info-table tr{
+
+        width: 65% !important;
+
+    }
+    #nav-body{
+        flex-direction: column;
+    }
+    #nav-body .col-7{
+        width: 100%;
+    }
+    #nav-body .col-5{
+        width: 100%;
+    }
+    .desprice{
+        flex-direction: column;
+    }
+    .desprice .col-7{
+        width: 100%;
+    }
+    .desprice .col-4{
+        width: 100%;
+    }
+    .coin-detail {
+        width: 600px  !important;
+    }
+    .crypto_News .News{
+        width: 45%  !important;
+    }
+
+}
