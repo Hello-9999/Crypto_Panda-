@@ -1,0 +1,35 @@
+  /* font-family: 'Roboto', sans-serif;
+
+    font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-family: 'Poppins', sans-serif; */
+.alert-box-body .title{
+    color:#BECBDA    ;
+    font-family: 'Roboto', sans-serif;
+}
+
+.alert-coin-value input{
+    color:#BEBEBE    ;
+    font-family: 'Poppins', sans-serif;
+}
+.alert-coin-footer p{
+    font-family: 'Poppins', sans-serif;
+
+}
+p.alert-coin-symb{
+    color: aliceblue;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;}
+
+    .alert-coinname span{
+        font-family: 'Lato', sans-serif;
+
+
+    }
+    .alert-coin-price p{
+        color: aliceblue;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+    }
