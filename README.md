@@ -9,7 +9,9 @@ Currently, two official plugins are available:
 
 
 Key Features:
+
 📈 Real-time market data and price tracking
+
 📰 Latest news and insights in the cryptocurrency world
 🔍 Comprehensive analysis and educational resources
 📊 Tools for making informed investment decisions
