@@ -1,0 +1,43 @@
+/*     font-family: 'Roboto', sans-serif;
+
+    font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+*/
+
+#name b {
+  font-family: "Lato", sans-serif;
+}
+#name h6 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+#price h6 {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+#price span {
+  font-size: 1.4rem;
+}
+.holding_details div {
+  /* background-color: antiquewhite; */
+  border: 1px solid rgba(240, 248, 255, 0.597) !important;
+  border-radius: 15px;
+}
+.holding_details div h6 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgba(240, 248, 255, 0.784);
+  font-size: 1.4rem;
+}
+.holding_details div p{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+
+}
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
+  background-color: rgb(0 0 0 / 8%) !important;
+}
