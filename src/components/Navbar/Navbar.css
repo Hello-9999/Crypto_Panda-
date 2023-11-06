@@ -10,3 +10,30 @@
     font-family: 'Poppins', sans-serif;
 
 }
+h6.logo{
+    font-size: 1.5rem;
+}
+h6.logo span{
+    font-family: 'Roboto', sans-serif;
+    color: #ef8f00;
+    letter-spacing: 1.4px;
+}
+h6.logo b{
+    font-family: 'Poppins', sans-serif; 
+    color: #ffc107;
+    letter-spacing: 1px;
+
+}
+.nav-bar .nav-link{
+    color: #d2c8a8 !important;
+    font-size: 1.1rem !important;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.nav-bar button{
+    align-items: flex-start;
+}
+.navbar-toggler{
+    background-color: #f1eeeea8 !important;
+}

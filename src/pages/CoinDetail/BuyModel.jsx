@@ -10,7 +10,7 @@ import { Coindetail } from "../../Services/axios";
 import { CircularProgress, TextField } from "@mui/material";
 import { loadStripe } from "@stripe/stripe-js";
 import { infotoast, warningtoast } from "../../Services/toastify";
-
+import '../CoinDetail/Buy.css'
 const BuyModel = ({
   CoinDetail,
   handleModel,
@@ -132,7 +132,7 @@ const BuyModel = ({
     }
   };
   return (
-    <div>
+    <div className="buy">
       {" "}
       <Modal
         aria-labelledby="transition-modal-title"
@@ -147,7 +147,7 @@ const BuyModel = ({
         //   },
         // }}
       >
-        <Box sx={style}>
+        <Box sx={style}    className="Buymodal">
           <div className="close" style={{ textAlign: "end" }}>
             {" "}
             <Button onClick={handleclose}>close</Button>

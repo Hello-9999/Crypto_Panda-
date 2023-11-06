@@ -82,12 +82,22 @@ const Bar = ({
 
   return (
     <>
-      <div style={{ position: "sticky", top: "0", zIndex: "9" }}>
-        <Navbar expand="lg" className="bg-body-tertiary">
+      <div className="nav-bar" style={{ position: "sticky", top: "0", zIndex: "9" }}>
+        <Navbar
+          expand="lg"
+          // className="bg-body-tertiary"
+          style={{ backgroundColor: "#35353c",  color:"aliceblue"}}
+        >
           <Container>
-            <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+            <Navbar.Brand href="#">
+              {" "}
+              <h6 className="logo">
+                <span> Crypto</span>
+                <b>Panda</b>
+              </h6>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
+            <Navbar.Collapse id="navbarScroll" style={{color:'aliceblue'}}>
               <Nav
                 className="me-auto my-2 my-lg-0"
                 style={{ maxHeight: "100px" }}
@@ -100,10 +110,10 @@ const Bar = ({
                 </Nav.Link>
                 <Nav.Link href="#action4">News</Nav.Link>
               </Nav>
-              <Nav>
+              <Nav className="a">
                 <div style={{ color: "black" }}>
                   {" "}
-                  <Button variant="outlined" onClick={handleSearch}>
+                  <Button variant="contained" onClick={handleSearch}>
                     <h5> {ButtonSign}</h5>
                     <ArrowDropDownIcon />
                   </Button>

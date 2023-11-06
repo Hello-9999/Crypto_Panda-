@@ -9,3 +9,14 @@ p{
     font-size: 1rem;
 
 }
+@media screen and (max-width : 768px ) {
+    .ourNews {
+        flex-direction: column;
+    }
+    .newsletter {
+        width: 90%;
+    }
+    .subscribe {
+        margin: auto;
+    }
+}

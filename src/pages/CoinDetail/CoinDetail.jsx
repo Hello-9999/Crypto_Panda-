@@ -83,24 +83,6 @@ const CoinDetail = () => {
   const dispatch = useDispatch();
   const Logindetails = useSelector((state) => state.Login_Details);
 
-  const getCoinDetail = async () => {
-    // <CircularProgress />
-    const response = await Coindetail(id.uid, currencyUid);
-    setCoinDetails(response);
-    if (response.status === "success") {
-      setCoinName(response.data.coin.name);
-      setCryptoCoinPrice(response.data.coin.price);
-    } else if (response.status === "fail") {
-      const data = setInterval(() => {
-        response;
-      }, 5000);
-      clearInterval(() => {
-        clearInterval(data);
-      }, 5000);
-    }
-    // <CircularProgress  style={{display:"none"}}/>
-  };
-
   // console.log(CoinName, "ma,e");
 
   const getcoinhistory = async () => {
@@ -225,6 +207,23 @@ const CoinDetail = () => {
 
   console.log(Checkinstore, "store");
 
+  const getCoinDetail = async () => {
+    // <CircularProgress />
+    const response = await Coindetail(id.uid, currencyUid);
+    setCoinDetails(response);
+    if (response.status === "success") {
+      setCoinName(response.data.coin.name);
+      setCryptoCoinPrice(response.data.coin.price);
+    } else if (response.status === "fail") {
+      const data = setInterval(() => {
+        response;
+      }, 5000);
+      clearInterval(() => {
+        clearInterval(data);
+      }, 5000);
+    }
+    // <CircularProgress  style={{display:"none"}}/>
+  };
   useEffect(() => {
     getCoinDetail();
 

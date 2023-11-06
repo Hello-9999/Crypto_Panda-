@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Coindetail } from "../../Services/axios";
 import {
   Box,
+  Breadcrumbs,
   Button,
   IconButton,
   Table,
@@ -13,6 +14,7 @@ import {
   TableHead,
   TableRow,
   TextField,
+  Typography,
 } from "@mui/material";
 import "./viewTransaction.css";
 import SellCoin from "./SellCoin";
@@ -173,6 +175,23 @@ const ViewTransaction = () => {
         <>
           {/* {console.log(Cryptodetail.data.coin)} */}
           <div className="container mt-5">
+            <div className="breadcrumb container mt-5">
+              <Breadcrumbs aria-label="breadcrumb">
+                <Link
+                  underline="hover"
+                  color="inherit"
+                  className="pre"
+                  to={`/coindetail/${Cryptodetail.data.coin.uuid}`}
+                >
+                  Go Back
+                </Link>
+
+                <Typography color="text.primary" className="now">
+                  {" "}
+                  {`${Cryptodetail.data.coin.name} `+ "Transaction Overview"}
+                </Typography>
+              </Breadcrumbs>
+            </div>
             <div
               className="Cryptoname d-flex gap-2"
               style={{ alignItems: "center" }}

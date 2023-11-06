@@ -1,0 +1,18 @@
+
+@media screen and  (max-width:425px) {
+    .Buymodal{
+        width: 85%  !important;
+        height: 80vh;
+        overflow: auto;
+    }
+    .des{
+
+        flex-direction: column;
+    }
+    .price{
+        width: 85%;
+        border-right: none !important;
+        margin-bottom: 1.5rem;
+        /* border: none; */
+    }
+}
