@@ -37,3 +37,23 @@ h6.logo b{
 .navbar-toggler{
     background-color: #f1eeeea8 !important;
 }
+
+@media screen and (max-width : 991px) {
+
+    div#navbarScroll{
+        height: 90vh;
+    }
+    .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll{
+        max-height: max-content !important;
+    }
+    
+    .btn-login{
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+        margin-left: 0  !important;
+        width: 95%;
+    }
+    .btn-search{
+        margin-top: 2rem;
+    }
+}

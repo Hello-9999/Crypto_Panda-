@@ -8,12 +8,16 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import PersonIcon from "@mui/icons-material/Person";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
+// import Button from 'antd'
+// import Button from "@mui/material";
+import { Button, Flex } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
 
 import "../Navbar/Navbar.css";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import SearchModal from "./SearchModal";
 import { SearchCoin } from "../../Services/axios";
 import { useSelector } from "react-redux";
@@ -82,11 +86,15 @@ const Bar = ({
 
   return (
     <>
-      <div className="nav-bar" style={{ position: "sticky", top: "0", zIndex: "9" }}>
+      <div
+        className="nav-bar"
+        style={{ position: "sticky", top: "0", zIndex: "9" }}
+      >
         <Navbar
+          className="pt-3 pb-3"
           expand="lg"
           // className="bg-body-tertiary"
-          style={{ backgroundColor: "#35353c",  color:"aliceblue"}}
+          style={{ backgroundColor: "#35353c", color: "aliceblue" }}
         >
           <Container>
             <Navbar.Brand href="#">
@@ -97,7 +105,7 @@ const Bar = ({
               </h6>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll" style={{color:'aliceblue'}}>
+            <Navbar.Collapse id="navbarScroll" style={{ color: "aliceblue" }}>
               <Nav
                 className="me-auto my-2 my-lg-0"
                 style={{ maxHeight: "100px" }}
@@ -110,12 +118,19 @@ const Bar = ({
                 </Nav.Link>
                 <Nav.Link href="#action4">News</Nav.Link>
               </Nav>
-              <Nav className="a">
+              <Nav className="search-div ">
                 <div style={{ color: "black" }}>
                   {" "}
-                  <Button variant="contained" onClick={handleSearch}>
-                    <h5> {ButtonSign}</h5>
-                    <ArrowDropDownIcon />
+                  <Button
+                    className="mx-3 btn-currency"
+                    type="primary"
+                    size="large"
+                    onClick={handleSearch}
+                  >
+                    <div className="d-flex">
+                      <h5> {ButtonSign}</h5>
+                      <ArrowDropDownIcon />
+                    </div>
                   </Button>
                   <CurrencyModal
                     openModal={openModal}
@@ -208,7 +223,17 @@ const Bar = ({
                 ) : (
                   <>
                     {" "}
-                    <Form className="d-flex">
+                    <Button
+                      type="primary"
+                      icon={<SearchOutlined />}
+                      onClick={clickInput}
+                      size="large"
+                      style={{ width: "180px" }}
+                      className="btn-search"
+                    >
+                      Search
+                    </Button>
+                    {/* <Form className="d-flex">
                       <div style={{}}>
                         <Form.Control
                           type=""
@@ -222,23 +247,44 @@ const Bar = ({
                         <div style={{}}>
                           <p>
                             {" "}
-                            <SearchModal
-                              searchdata={searchdata}
-                              Coins={Coins}
-                              exchanges={Exchanges}
-                              markets={Markets}
-                              setsearchvalue={setsearchvalue}
-                              searchvalue={searchvalue}
-                              displayinput={displayinput}
-                              setdisplayinput={setdisplayinput}
-                            />
+
                           </p>
                         </div>
                       </div>
-                    </Form>
-                    <Button className="mx-4" onClick={Loggedin}>
+                    </Form> */}
+                    <Button
+                      className="mx-4 btn-login"
+                      style={{ alignItems: "center" }}
+                      // variant="contained"
+                      type="primary"
+                      size="large"
+                      href="/login"
+                      // onClick={Loggedin}
+                      ghost
+                    >
                       Login
                     </Button>
+                    <Button
+                      className=" btn-signup"
+                      style={{ alignItems: "center" }}
+                      // variant="contained"
+                      type="primary"
+                      size="large"
+                      // onClick={Loggedin}
+                      href="/signup"
+                    >
+                      Sign up
+                    </Button>
+                    <SearchModal
+                      searchdata={searchdata}
+                      Coins={Coins}
+                      exchanges={Exchanges}
+                      markets={Markets}
+                      setsearchvalue={setsearchvalue}
+                      searchvalue={searchvalue}
+                      displayinput={displayinput}
+                      setdisplayinput={setdisplayinput}
+                    />
                   </>
                 )}
               </Nav>
