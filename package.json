@@ -1,7 +1,7 @@
 {
   "homepage": "http://Hello-9999.github.io/Crypto_Panda-",
   "name": "crypto_currency",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
