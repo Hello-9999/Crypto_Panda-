@@ -27,9 +27,10 @@ const id = import.meta.env.VITE_PAYPAL_CLIENTID;
 
 function App() {
   return (
-    <PayPalScriptProvider options={{ clientId: `${id}` }}>
+    // <PayPalScriptProvider options={{ clientId: `${id}` }}>
+    <>
       <Routes>
-        s{/* <Route path="/all-coinlist" element={<Home />} /> */}
+        {/* <Route path="/all-coinlist" element={<Home />} /> */}
         <Route path="/" element={<Home1 />} />
         <Route path="/coinlist" element={<Coinlist />} />
         <Route path={`coindetail/:uid`} element={<CoinDetail />} />
@@ -49,7 +50,8 @@ function App() {
         <Route path="/cancel" element={<PaymentCancel />} />
       </Routes>
       <ToastContainer />
-    </PayPalScriptProvider>
+    </>
+    // </PayPalScriptProvider>
   );
 }
 

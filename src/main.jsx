@@ -12,12 +12,12 @@ import Footer from "./components/Footer/Footer.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="">
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <App />
-          <hr style={{margin:"0"}} className="mt-4"/>
-          <Footer  />
+          <hr style={{ margin: "0" }} className="mt-4" />
+          <Footer />
         </PersistGate>
       </Provider>
     </BrowserRouter>
