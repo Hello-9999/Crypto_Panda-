@@ -58,17 +58,20 @@ const Home1 = () => {
             position: "sticky",
             top: "0",
             zIndex: "9",
-            backgroundColor: "white",
+            backgroundColor: "#35353c",
           }}
         >
           <Navbar expand="lg" className=" ">
             <Container style={{ gap: "50%" }}>
               <Navbar.Brand href="#" className="me-auto my-2 my-lg-0">
-                Navbar scroll
+              <h6 className="logo">
+                <span> Crypto</span>
+                <b>Panda</b>
+              </h6>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="navbarScroll" />
               <Navbar.Collapse id="navbarScroll" style={{ flexGrow: "0" }}>
-                <Nav style={{ maxHeight: "100px" }} navbarScroll>
+                <Nav style={{  }} navbarScroll>
                   <Nav.Link href="#home">Home</Nav.Link>
                   <Nav.Link href="#about">About</Nav.Link>
                   <Nav.Link href="#service">Feature</Nav.Link>
