@@ -2,7 +2,6 @@
     "version": 2,
     "builds": [{ "src": "./stripeserver.js", "use": "@vercel/node" }],
     "routes": [
-      { "src": "/api/create-checkout-session", "dest": "/stripeserver.js" },
       { "src": "/(.*)", "dest": "/" }
     ]
   }
