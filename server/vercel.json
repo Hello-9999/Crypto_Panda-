@@ -1,8 +1,15 @@
 {
-    "version": 2,
-    "builds": [{ "src": "./stripeserver.js", "use": "@vercel/node" }],
-    "routes": [
-      { "src": "/(.*)", "dest": "/" }
-    ]
-  }
-  
+  "build": [
+    {
+      "src": "stripeserver.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+
+      "dest": "stripeserver.js"
+    }
+  ]
+}
