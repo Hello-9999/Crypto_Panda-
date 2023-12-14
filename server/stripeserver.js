@@ -10,93 +10,97 @@ const stripe = require("stripe")(
 );
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use("/",(req,res)=>{
+
+  res.send("server runnning")
+});
 
 //  checkout pai
-app.post("/api/create-checkout-session", async (req, res) => {
-  const Product = req.body;
-  console.log(Product.currencySymbol);
+// app.post("/api/create-checkout-session", async (req, res) => {
+//   const Product = req.body;
+//   console.log(Product.currencySymbol);
 
-  const session = await stripe.checkout.sessions.create({
-    // ui_mode: "embedded",
+//   const session = await stripe.checkout.sessions.create({
+//     // ui_mode: "embedded",
 
-    payment_method_types: ["card"],
-    line_items: [
-      {
-        price_data: {
-          currency: `${Product.currencySymbol}`,
-          unit_amount: Product.Product_Price,
-          product_data: {
-            name: Product.Product_Name,
-            images: [`${Product.Product_Img}`],
-          },
-        },
-        quantity: Product.Product_Quanty,
-      },
-    ],
-    mode: "payment",
-    success_url: `http://localhost:5173/success`,
-    cancel_url: `http://localhost:5173/error`,
-  });
-  res.json({ id: session.id });
-  console.log(session.payment_status);
+//     payment_method_types: ["card"],
+//     line_items: [
+//       {
+//         price_data: {
+//           currency: `${Product.currencySymbol}`,
+//           unit_amount: Product.Product_Price,
+//           product_data: {
+//             name: Product.Product_Name,
+//             images: [`${Product.Product_Img}`],
+//           },
+//         },
+//         quantity: Product.Product_Quanty,
+//       },
+//     ],
+//     mode: "payment",
+//     success_url: `http://localhost:5173/success`,
+//     cancel_url: `http://localhost:5173/error`,
+//   });
+//   res.json({ id: session.id });
+//   console.log(session.payment_status);
 
-  //   if (session.payment_status === 'paid') {
-  //     // Perform actions for successful payment
-  //     // For example, update database, send confirmation email, etc.
-  //     console.log('Payment successful. Take action here.');
-  //     res.json({ success: true });
-  //   } else {
-  //     res.json({ success: false });
-  //   }
-  // } catch (error) {
-  //   res.status(500).json({ error: error.message });
-  // }
+//   //   if (session.payment_status === 'paid') {
+//   //     // Perform actions for successful payment
+//   //     // For example, update database, send confirmation email, etc.
+//   //     console.log('Payment successful. Take action here.');
+//   //     res.json({ success: true });
+//   //   } else {
+//   //     res.json({ success: false });
+//   //   }
+//   // } catch (error) {
+//   //   res.status(500).json({ error: error.message });
+//   // }
 
-  //   console.log(session.status);
+//   //   console.log(session.status);
 
-  // console.log(session);
-  // (async () => {
-  //   const { paymentIntent } = await stripe.retrievePaymentIntent(
-  //     "sk_test_51O6x3vExvpXnhG9PbUOxvb3L7zbQVLCzjGGfxBuSHzxxJo9q5KXdaRWzhwawNIsw77L3oxve0fYlKcGTthGHOSZD00xGsjA6o6"
-  //   );
-  //   if (paymentIntent && paymentIntent.status === "succeeded") {
-  //     // Handle successful payment here
-  //     alert('Success')
-  //   } else {
-  //     alert('eror')
-  //     // Handle unsuccessful, processing, or canceled payments and API errors here
-  //   }
-  // })();
+//   // console.log(session);
+//   // (async () => {
+//   //   const { paymentIntent } = await stripe.retrievePaymentIntent(
+//   //     "sk_test_51O6x3vExvpXnhG9PbUOxvb3L7zbQVLCzjGGfxBuSHzxxJo9q5KXdaRWzhwawNIsw77L3oxve0fYlKcGTthGHOSZD00xGsjA6o6"
+//   //   );
+//   //   if (paymentIntent && paymentIntent.status === "succeeded") {
+//   //     // Handle successful payment here
+//   //     alert('Success')
+//   //   } else {
+//   //     alert('eror')
+//   //     // Handle unsuccessful, processing, or canceled payments and API errors here
+//   //   }
+//   // })();
 
-  // const paymentIntent = await stripe.paymentIntents.create({
-  //   // currency: "usd",
-  //   // payment_method_types: ["card"],
+//   // const paymentIntent = await stripe.paymentIntents.create({
+//   //   // currency: "usd",
+//   //   // payment_method_types: ["card"],
 
-  //   // line_items: [
-  //   //   {
-  //   //     price_data: {
-  //   //       currency: "usd",
-  //   //       unit_amount: Product.Product_Price,
-  //   //       product_data: {
-  //   //         name: Product.Product_Name,
-  //   //         images: [`${Product.Product_Img}`],
-  //   //       },
-  //   //     },
-  //   //     quantity: Product.Product_Quanty,
-  //   //   },
-  //   // ],
-  //   // mode: "payment",
-  //   // success_url: `http://localhost:5173/favorites`,
-  //   // cancel_url: `http://localhost:5173/favorites`,
+//   //   // line_items: [
+//   //   //   {
+//   //   //     price_data: {
+//   //   //       currency: "usd",
+//   //   //       unit_amount: Product.Product_Price,
+//   //   //       product_data: {
+//   //   //         name: Product.Product_Name,
+//   //   //         images: [`${Product.Product_Img}`],
+//   //   //       },
+//   //   //     },
+//   //   //     quantity: Product.Product_Quanty,
+//   //   //   },
+//   //   // ],
+//   //   // mode: "payment",
+//   //   // success_url: `http://localhost:5173/favorites`,
+//   //   // cancel_url: `http://localhost:5173/favorites`,
 
-  //   amount: 1099,
-  //   currency: "usd",
-  //   payment_method_types: ["card"],
-  // });
+//   //   amount: 1099,
+//   //   currency: "usd",
+//   //   payment_method_types: ["card"],
+//   // });
 
-  // res.json({ id: paymentIntent.id });
-});
+//   // res.json({ id: paymentIntent.id });
+// });
 
 // app.post("/create-payment-intent", async (req, res) => {
 //   const Product = req.body;
