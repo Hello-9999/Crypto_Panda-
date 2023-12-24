@@ -64,14 +64,21 @@ const Home1 = () => {
           <Navbar expand="lg" className=" ">
             <Container style={{ gap: "50%" }}>
               <Navbar.Brand href="#" className="me-auto my-2 my-lg-0">
-              <h6 className="logo">
-                <span> Crypto</span>
-                <b>Panda</b>
-              </h6>
+                <h6 className="logo">
+                  <img
+                    src="../icons/panda_icon.jpeg"
+                    alt=""
+                    srcset=""
+                    width="50px"
+                    style={{ borderRadius: "50px" }}
+                  />
+                  <span> Crypto</span>
+                  <b>Panda</b>
+                </h6>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="navbarScroll" />
               <Navbar.Collapse id="navbarScroll" style={{ flexGrow: "0" }}>
-                <Nav style={{  }} navbarScroll>
+                <Nav style={{}} navbarScroll>
                   <Nav.Link href="#home">Home</Nav.Link>
                   <Nav.Link href="#about">About</Nav.Link>
                   <Nav.Link href="#service">Feature</Nav.Link>
@@ -154,7 +161,7 @@ const Home1 = () => {
           </div>
         </div>
         <hr />
-        <div className="feature  mb-4" id="service">
+        <div className="feature  pb-4" id="service">
           <h4 style={{ textAlign: "center" }}>Our Features</h4>
 
           <div
@@ -211,38 +218,6 @@ const Home1 = () => {
             </div>
           </div>
         </div>
-        {/* <hr />
-        <div
-          className="explore d-flex container"
-          style={{ justifyContent: "space-between", alignItems: "center" }}
-        >
-          <div className="col-5">
-            <h4>Let's Explore Together</h4>
-            <p>
-              CryptoPanda may be a solo project, but it's fueled by a profound
-              passion for cryptocurrencies and their potential. Join us on this
-              exciting journey, and let's explore the world of digital assets
-              together.
-            </p>
-          </div>
-
-          <div>
-            <Form inline>
-              <Row>
-                <Col xs="auto">
-                  <Form.Control
-                    type="email"
-                    placeholder="Enter your email"
-                    className=" mr-sm-2"
-                  />
-                </Col>
-                <Col xs="auto">
-                  <Button type="submit">Subscribe</Button>
-                </Col>
-              </Row>
-            </Form>
-          </div>
-        </div> */}
       </div>
     </>
   );

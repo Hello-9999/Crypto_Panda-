@@ -1,59 +1,54 @@
-
- /* font-family: 'Roboto', sans-serif;
+/* font-family: 'Roboto', sans-serif;
 
     font-family: 'Lato', sans-serif;
         font-family: 'Roboto', sans-serif;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     font-family: 'Poppins', sans-serif; */
-.dropdown-item{
-    font-family: 'Poppins', sans-serif;
-
+.dropdown-item {
+  font-family: "Poppins", sans-serif;
 }
-h6.logo{
-    font-size: 1.5rem;
+h6.logo {
+  font-size: 1.5rem;
 }
-h6.logo span{
-    font-family: 'Roboto', sans-serif;
-    color: #ef8f00;
-    letter-spacing: 1.4px;
+h6.logo span {
+  font-family: "Roboto", sans-serif;
+  color: #ef8f00;
+  letter-spacing: 1.4px;
 }
-h6.logo b{
-    font-family: 'Poppins', sans-serif; 
-    color: #ffc107;
-    letter-spacing: 1px;
-
+h6.logo b {
+  font-family: "Poppins", sans-serif;
+  color: #ffc107;
+  letter-spacing: 1px;
 }
-.nav-bar .nav-link{
-    color: #d2c8a8 !important;
-    font-size: 1.1rem !important;
-    font-family: 'Poppins', sans-serif;
-
+.nav-bar .nav-link {
+  color: #d2c8a8 !important;
+  font-size: 1.1rem !important;
+  font-family: "Poppins", sans-serif;
 }
 
-.nav-bar button{
-    align-items: flex-start;
+.nav-bar button {
+  align-items: flex-start;
 }
-.navbar-toggler{
-    background-color: #f1eeeea8 !important;
+.navbar-toggler {
+  background-color: #f1eeeea8 !important;
 }
 
-@media screen and (max-width : 991px) {
-
-    div#navbarScroll{
-        height: 90vh;
-    }
-    .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll{
-        max-height: max-content !important;
-    }
-    
-    .btn-login{
-        margin-top: 4rem;
-        margin-bottom: 1.5rem;
-        margin-left: 0  !important;
-        width: 95%;
-    }
-    .btn-search{
-        margin-top: 2rem;
-    }
+@media screen and (max-width: 991px) {
+  .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll {
+    max-height: max-content !important;
+  }
+  .navbar-collapse button.mx-3.btn.btn-primary{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .btn-login {
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0 !important;
+    width: 95%;
+  }
+  .btn-search {
+    margin-top: 2rem;
+  }
 }

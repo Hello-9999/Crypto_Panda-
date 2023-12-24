@@ -85,7 +85,7 @@
 
 .homepage .feature div.container {
     margin-top: 5rem !important;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
 }
 
 .homepage .feature div.container div h5 b {
@@ -120,12 +120,15 @@
 }
 
 .bar .nav-link {
-    /* color: aliceblue; */
+    color: aliceblue;
 
     font-size: 1.2rem;
     /* position: relative; */
 
 
+}
+.bar .a.nav-link :focus{
+color: orange !important;
 }
 
 

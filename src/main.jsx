@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <App />
-          <hr style={{ margin: "0" }} className="mt-4" />
+          <hr style={{ margin: "0" }} className="" />
           <Footer />
         </PersistGate>
       </Provider>
