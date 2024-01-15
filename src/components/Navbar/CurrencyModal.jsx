@@ -116,7 +116,6 @@ const CurrencyModal = ({
                     ) : (
                       <>
                         {NcurrencySign.map((sign) => {
-                          console.log(sign);
                           return (
                             <>
                               {" "}

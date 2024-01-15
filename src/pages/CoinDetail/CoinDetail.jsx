@@ -211,6 +211,7 @@ const CoinDetail = () => {
     // <CircularProgress />
     const response = await Coindetail(id.uid, currencyUid);
     setCoinDetails(response);
+    console.log(response ,'response')
     if (response.status === "success") {
       setCoinName(response.data.coin.name);
       setCryptoCoinPrice(response.data.coin.price);
@@ -661,6 +662,7 @@ const CoinDetail = () => {
               <div className="info col-4">
                 <h4>info</h4>
                 <div
+                id="info_table"
                   className="info_table d-flex"
                   style={{ flexDirection: "column" }}
                 >
@@ -939,7 +941,7 @@ const CoinDetail = () => {
               </div>
             </div>
 
-            <div className="crypto_News mt-5">
+            <div className="crypto_News mt-5 mb-5">
               <h4> {`${CoinName} Latest News`}</h4>
               {/* {console.log(CoinNews,'mewssd')} */}
               {/* {console.log(CoinNews.data.status && CoinNews.data.status,'Newsdasf')} */}
@@ -1010,13 +1012,13 @@ const CoinDetail = () => {
                     })}
                   </div>
 
-                  <Button>
+                  {/* <Button>
                     {" "}
                     <Link to={`/${CoinDetails.data.coin.name}/News`}>
                       {" "}
                       Read More{" "}
                     </Link>
-                  </Button>
+                  </Button> */}
                 </>
               ) : (
                 <>loader</>

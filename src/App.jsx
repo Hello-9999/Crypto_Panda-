@@ -20,6 +20,7 @@ import Pricealert from "./pages/PriceAlerat/Pricealert";
 import PaymentSucess from "./pages/PAymentStatus/PaymentSucess";
 import PaymentCancel from "./pages/PAymentStatus/PaymentCancel";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer/Footer";
 // import Footer from "./components/Footer/Footer";
 
 // import ViewTransaction from "./pages/View Transaction/Transaction";
@@ -49,7 +50,10 @@ function App() {
         <Route path="/success" element={<PaymentSucess />} />
         <Route path="/cancel" element={<PaymentCancel />} />
       </Routes>
+
+      
       <ToastContainer />
+      <Footer />
     </>
     // </PayPalScriptProvider>
   );

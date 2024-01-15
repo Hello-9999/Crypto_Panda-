@@ -174,7 +174,7 @@ const FavorateCoin = () => {
           <div>
             <TableContainer
               sx={{ maxHeight: "800px" }}
-              className="fav-table mt-5 "
+              className="fav-table mt-5 mb-5"
             >
               {" "}
               <Table id="table">
@@ -187,30 +187,7 @@ const FavorateCoin = () => {
                       {" "}
                       <b>Coin</b>
                     </TableCell>
-                    <TableCell>
-                      {" "}
-                      <b> price </b>
-                    </TableCell>
-                    <TableCell style={{ textAlign: "center" }}>
-                      {" "}
-                      <b> 24h </b>
-                    </TableCell>
-                    {/* 
-                  <TableCell style={{ textAlign: "center" }}>24h </TableCell>
-                  <TableCell style={{ textAlign: "center" }}>7d </TableCell> */}
-                    <TableCell>
-                      {" "}
-                      <b>Market Cap </b>
-                    </TableCell>
-                    <TableCell style={{ textAlign: "center" }}>
-                      {" "}
-                      <b> 24h ago </b>{" "}
-                    </TableCell>
-                    {/* <TableCell>Holding</TableCell>
-                <TableCell>PNL</TableCell> */}
-                    <TableCell>
-                      <b> Action </b>
-                    </TableCell>
+                  
                   </TableRow>
                 </TableHead>
 
@@ -257,95 +234,7 @@ const FavorateCoin = () => {
                               </div>
                             </div>
                           </TableCell>
-                          <TableCell>
-                            <h6>{` $ ${Number(data.price).toLocaleString(
-                              3
-                            )}`}</h6>
-                          </TableCell>
-                          {}
-                          <TableCell>
-                            {" "}
-                            <div
-                              className="text mt-1 "
-                              style={{ textAlign: "center" }}
-                            >
-                              {data.change.match("-") ? (
-                                <>
-                                  {" "}
-                                  <h6 style={{ color: "red" }}>
-                                    {data.change + " %"}
-                                  </h6>
-                                </>
-                              ) : (
-                                <>
-                                  <h6 style={{ color: "green" }}>
-                                    {data.change + " %"}
-                                  </h6>
-                                </>
-                              )}
-                            </div>
-                          </TableCell>
-
-                          <TableCell>{`$ ${Number(
-                            data.marketCap
-                          ).toLocaleString(3)}`}</TableCell>
-                          <TableCell>
-                            <div className="sparkline">
-                              {" "}
-                              {data.change.match("-") ? (
-                                <>
-                                  <Sparklines
-                                    data={data.sparkline}
-                                    limit={20}
-                                    style={{ marginTop: "1px", width: "65%" }}
-                                  >
-                                    <SparklinesLine color="#ff3a33" />
-                                    <SparklinesSpots />
-                                  </Sparklines>
-                                </>
-                              ) : (
-                                <>
-                                  <Sparklines
-                                    data={data.sparkline}
-                                    limit={20}
-                                    style={{ marginTop: "1px", width: "65%" }}
-                                  >
-                                    <SparklinesLine color="#32ca5b" />
-                                    <SparklinesSpots />
-                                  </Sparklines>
-                                </>
-                              )}
-                            </div>
-                          </TableCell>
-
-                          <TableCell>
-                            <div className="d-flex">
-                              <div className="pnl-amount">
-                                {" "}
-                                <Tooltip title="Add Transaction">
-                                  <IconButton
-                                    sx={{ color: "white" }}
-                                    onClick={(e) =>
-                                      addtransaction(e, data.uuid, data)
-                                    }
-                                  >
-                                    <AddIcon />
-                                  </IconButton>
-                                </Tooltip>
-                              </div>
-
-                              <div className="pnl-profit_loss">
-                                <Tooltip title="View Transaction">
-                                  <IconButton
-                                    sx={{ color: "#cccc" }}
-                                    onClick={(e) => viewTransaction(e, data)}
-                                  >
-                                    <ReceiptIcon />
-                                  </IconButton>
-                                </Tooltip>
-                              </div>
-                            </div>
-                          </TableCell>
+                          
                         </TableRow>
                       </>
                     );

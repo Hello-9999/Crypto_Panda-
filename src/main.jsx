@@ -17,7 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <PersistGate loading={null} persistor={persistor}>
           <App />
           <hr style={{ margin: "0" }} className="" />
-          <Footer />
         </PersistGate>
       </Provider>
     </BrowserRouter>

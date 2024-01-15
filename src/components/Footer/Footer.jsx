@@ -22,8 +22,8 @@ const Footer = () => {
     <div
       className="footer "
       style={{
-        position: "absolute",
-        // bottom: "0",
+        position: "relative",
+        bottom: "0",
         width: "100%",
         padding: "25px",
         backgroundColor: "#0D1217",

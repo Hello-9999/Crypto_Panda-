@@ -84,6 +84,8 @@ const Bar = ({
     getSearchSuggest();
   }, [searchvalue]);
 
+  console.log(Logindetails, "details");
+
   return (
     <>
       <div
@@ -116,9 +118,9 @@ const Bar = ({
                 <Nav.Link href="/crypto-gainers-losers">
                   Gainers & Losers
                 </Nav.Link>
-                <Nav.Link href="#action4">News</Nav.Link>
+                {/* <Nav.Link href="#action4">News</Nav.Link> */}
               </Nav>
-              <Nav className="search-div ">
+              <Nav className="search-div " style={{alignItems:"baseline"}}>
                 <div style={{ color: "black" }}>
                   {" "}
                   <Button
@@ -193,15 +195,8 @@ const Bar = ({
                     </NavDropdown>
                     <Form className="d-flex">
                       <div style={{}}>
-                        <Form.Control
-                          type=""
-                          // disabled
-                          placeholder="Search"
-                          className="me-2"
-                          aria-label="Search"
-                          onClick={clickInput}
-                          // onDrop={}
-                        />
+                        <Button style={{width:"200px", height:"45px", fontSize:"1.2rem"}} onClick={clickInput}>Search</Button>
+                       
                         <div style={{}}>
                           <p>
                             {" "}
