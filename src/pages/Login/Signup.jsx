@@ -22,6 +22,10 @@ import Lottie from "lottie-react";
 import Images from "./tgqIMdmMYR.json";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "../../Server/Loginserver";
+import { errortoast } from "../../Services/toastify";
+import Box from "@mui/material/Box";
 
 // import Link from "react-router-dom";
 const Signup = () => {
@@ -30,7 +34,7 @@ const Signup = () => {
   const [Passwoard, setPasswoard] = useState("");
   const [Confirmpassword, setConfirmpassword] = useState("");
   const [showpassword, setshowpassword] = useState(false);
-  const [Loader ,setLoader]=useState(false)
+  const [Loader, setLoader] = useState(false);
   const navigate = useNavigate();
 
   const handlenavigate = (e) => {
@@ -39,27 +43,56 @@ const Signup = () => {
     navigate("/login");
   };
 
-  const handleRegister = async (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
-    setLoader(true)
+    setLoader(true);
 
-    const RegisterData = {
-      name: Name,
-      email: Email,
-      password: Confirmpassword,
-    };
+    // const RegisterData = {
+    //   name: Name,
+    //   email: Email,
+    //   password: Confirmpassword,
+    // };
 
-    const response = await RegisterForm(RegisterData,setLoader);
-    console.log(response.data.status);
-    if (response.data.status) {
-      // setLoader(false)
-      navigate("/login")
-      
+    // const response = await RegisterForm(RegisterData,setLoader);
+    // console.log(response.data.status);
+    // if (response.data.status) {
+    //   // setLoader(false)
+    //   navigate("/login")
+
+    // } else {
+    //   // setLoader(false)
+    //   console.log('falsxe')
+    // }
+    // // console.log(RegisterData);
+    if (Passwoard === Confirmpassword) {
+      createUserWithEmailAndPassword(auth, Email, Confirmpassword)
+        .then((userCredential) => {
+          setLoader(false);
+
+          // Signed up
+          const user = userCredential.user;
+          if (user) {
+            updateProfile(user, {
+              displayName: `${Name}`,
+            });
+          } else {
+          }
+          console.log(user);
+          // navigate("/login");
+          // ...
+        })
+        .catch((error) => {
+          setLoader(false);
+          const errorCode = error.code;
+          const errorMessage = error[0];
+          errortoast(errorMessage);
+          // console.log(errorMessage)
+          // ..
+        });
     } else {
-      // setLoader(false)
-      console.log('falsxe')
+      setLoader(false);
+      errortoast(`Password & Confirm password didn't match !! `);
     }
-    // console.log(RegisterData);
   };
   const style = {
     height: "60vh",
@@ -74,7 +107,7 @@ const Signup = () => {
   // Alert('er')
   return (
     <div>
-      <Navbar style={{ padding: "30px" }} />
+      {/* <Navbar style={{ padding: "30px" }} /> */}
       <div
         className="d-flex "
         style={{
@@ -93,9 +126,13 @@ const Signup = () => {
           </div>
         </div>
 
-        <div className=" reg-form col-4" style={{}}>
-          <Container className="mt-5">
-            <Card className="signup-form">
+        <div className=" reg-form col-4" style={{ backgroundColor: "#fff" }}>
+          <Container className="mt-5" >
+            <Box
+              className="signup-form"
+              component="form"
+              onSubmit={handleRegister}
+            >
               {" "}
               <div
                 className="container"
@@ -110,19 +147,22 @@ const Signup = () => {
                     // helperText="asd"
                     label="Enter your full name"
                     onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="mt-3">
                   {" "}
                   <TextField
                     fullWidth
+                    required
+                    type="email"
                     // placeholder="email"
                     label="Enter your email"
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="mt-3">
-                  <FormControl variant="outlined" fullWidth>
+                  <FormControl variant="outlined" fullWidth required>
                     <InputLabel htmlFor="outlined-adornment-password">
                       <h6>Create a password </h6>
                     </InputLabel>
@@ -148,13 +188,13 @@ const Signup = () => {
                   </FormControl>
                 </div>
                 <div className="mt-3">
-                  <FormControl variant="outlined" fullWidth>
+                  <FormControl variant="outlined" fullWidth required>
                     <InputLabel htmlFor="outlined-adornment-password">
                       <h6> Confirm Password </h6>
                     </InputLabel>
                     <OutlinedInput
                       // fullWidth
-                      id="outlined-adornment-password"
+                      id="outlined-adornment-confirm_password"
                       type={showpassword ? "text" : "password"}
                       onChange={(e) => setConfirmpassword(e.target.value)}
                       endAdornment={
@@ -172,22 +212,41 @@ const Signup = () => {
                       label="Password"
                     />
                   </FormControl>
-                </div>
-                <Button
-                  fullWidth
-                  className="mt-4 submit "
-                  onClick={handleRegister}
-                >
-                  {" "}
-                 {Loader ? <> <CircularProgress disableShrink /></>:<>Create Account</>}  
-                </Button>
+                </div>{" "}
+                {Loader ? (
+                  <>
+                    {" "}
+                    <Button
+                      fullWidth
+                      className="mt-4 submit "
+                      type="submit"
+                      // onClick={handleRegister}
+                      disabled
+                    >
+                      <CircularProgress disableShrink />
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    <Button
+                      fullWidth
+                      className="mt-4 submit "
+                      type="submit"
+
+                      // onClick={handleRegister}
+                    >
+                      Create Account{" "}
+                    </Button>
+                  </>
+                )}
                 <div className="mb-5 mt-4 footer">
                   <h6>
                     Have an account ? <Link to={"/login"}>Sign In</Link>{" "}
                   </h6>
                 </div>
               </div>
-            </Card>{" "}
+            </Box>{" "}
           </Container>{" "}
         </div>
       </div>

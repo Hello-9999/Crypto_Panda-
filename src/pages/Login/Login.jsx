@@ -25,6 +25,10 @@ import Logindetails, {
   LoginDataslice,
   LoginDetails,
 } from "../../slice/Logindetails";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../Server/Loginserver";
+import { errortoast } from "../../Services/toastify";
+
 const Login = () => {
   const [Email, setEmail] = useState("");
   const [Password, setPasswoard] = useState("");
@@ -44,21 +48,44 @@ const Login = () => {
     e.preventDefault();
     setLoader(true);
 
-    const logindata = {
-      email: Email,
-      password: Password,
-    };
+    // const logindata = {
+    //   email: Email,
+    //   password: Password,
+    // };
 
-    const response = await LoginForm(logindata, setLoader);
-    if (response.data.status === "success") {
-      console.log("okay");
-      dispatch(LoginDataslice(response.data));
-      navigate("/coinlist");
-    } else {
-    }
+    // const response = await LoginForm(logindata, setLoader);
+    // if (response.data.status === "success") {
+    //   console.log("okay");
+    //   dispatch(LoginDataslice(response.data));
+    //   navigate("/coinlist");
+    // } else {
+    // }
 
-    console.log(logindata, "data");
-    console.log(response.data.authData, "da");
+    // console.log(logindata, "data");
+    // console.log(response.data.authData, "da");
+
+    signInWithEmailAndPassword(auth, Email, Password)
+      .then((userCredential) => {
+        setLoader(false);
+        const user = userCredential.user;
+        const user_Data ={
+
+          JWT : user.uid,
+          Email:user.email,
+          Name :user.displayName
+
+
+        }
+        dispatch(LoginDataslice(user_Data));
+        navigate("/coinlist");      
+      })
+      .catch((error) => {
+        setLoader(false);
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        errortoast(errorMessage);
+      });
   };
 
   const handleClickShowPassword = (e) => {
