@@ -12,12 +12,20 @@ export const LoginDetails = createSlice({
     LoginDataslice: (state, data) => {
       const Details = data.payload;
 
-      if (Details.status === "success") {
-        // state.isLoggedin === true
-        state.LoggedinDetails = Details.authData;
+      console.log(Details);
+
+      if (Details.JWT !== null) {
+        state.LoggedinDetails = Details;
         state.isLoggedin = true;
       } else {
       }
+
+      // if (Details.status === "success") {
+      //   // state.isLoggedin === true
+      //   state.LoggedinDetails = Details.authData;
+      //   state.isLoggedin = true;
+      // } else {
+      // }
     },
   },
 });

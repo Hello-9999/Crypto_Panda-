@@ -31,4 +31,4 @@ build/
 dist/
 
 # Environment variables
-# .env
+.env
