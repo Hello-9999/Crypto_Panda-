@@ -46,24 +46,6 @@ const Signup = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     setLoader(true);
-
-    // const RegisterData = {
-    //   name: Name,
-    //   email: Email,
-    //   password: Confirmpassword,
-    // };
-
-    // const response = await RegisterForm(RegisterData,setLoader);
-    // console.log(response.data.status);
-    // if (response.data.status) {
-    //   // setLoader(false)
-    //   navigate("/login")
-
-    // } else {
-    //   // setLoader(false)
-    //   console.log('falsxe')
-    // }
-    // // console.log(RegisterData);
     if (Passwoard === Confirmpassword) {
       createUserWithEmailAndPassword(auth, Email, Confirmpassword)
         .then((userCredential) => {
@@ -77,17 +59,14 @@ const Signup = () => {
             });
           } else {
           }
-          console.log(user);
-          // navigate("/login");
+          navigate("/login");
           // ...
         })
         .catch((error) => {
           setLoader(false);
           const errorCode = error.code;
-          const errorMessage = error[0];
+          const errorMessage = error.message;
           errortoast(errorMessage);
-          // console.log(errorMessage)
-          // ..
         });
     } else {
       setLoader(false);
@@ -104,10 +83,8 @@ const Signup = () => {
     e.preventDefault();
     setshowpassword(!showpassword);
   };
-  // Alert('er')
   return (
     <div>
-      {/* <Navbar style={{ padding: "30px" }} /> */}
       <div
         className="d-flex "
         style={{
