@@ -44,9 +44,7 @@ const Bar = ({
   const [openModal, setopenModal] = useState(false);
   const [ButtonSign, setButtonSign] = useState("$");
 
-  // nav.addEventListener('mouseover',()=>{
-  //   console.log('asd')
-  // })
+
 
   const getSearchSuggest = async () => {
     const response = await SearchCoin(searchvalue);
@@ -140,8 +138,6 @@ const Bar = ({
                     setcurrencyUid={setcurrencyUid}
                     setcurrencySign={setcurrencySign}
                     setButtonSign={setButtonSign}
-                    setcurrencyName={setcurrencyName}
-                    setcurrencySymbol={setcurrencySymbol}
                   />
                 </div>
                 {Logindetails.isLoggedin ? (
@@ -151,7 +147,7 @@ const Bar = ({
                       id="navDropdown"
                       className="mx-3"
                     >
-                      <NavDropdown.Item href="/favorites">
+                      <NavDropdown.Item href="/favorites" >
                         Portfolio
                       </NavDropdown.Item>
                       <NavDropdown.Item href="/alert">

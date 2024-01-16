@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CoinlistTable from "../../components/CoinlistTable/CoinlistTable";
 import Accordion from "../../components/Accordion/Accordion";
 import "../../components/CoinlistTable/Cointable.css";
+import Footer from "../../components/Footer/Footer";
 const Coinlist = () => {
   const [currencyUid, setcurrencyUid] = useState("yhjMzLPhuIDl");
   const [currencySign, setcurrencySign] = useState("$");
@@ -30,6 +31,8 @@ const Coinlist = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };

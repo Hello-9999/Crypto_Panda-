@@ -37,6 +37,8 @@ import { favoriteList, removeitem } from "../../slice/AddtoFavorite";
 import Star from "@mui/icons-material/Star";
 import BuyModel from "./BuyModel";
 import { successtoast, warningtoast } from "../../Services/toastify";
+import CircularProgress from "@mui/material/CircularProgress";
+import Footer from "../../components/Footer/Footer";
 
 const CoinDetail = () => {
   const id = useParams();
@@ -211,7 +213,7 @@ const CoinDetail = () => {
     // <CircularProgress />
     const response = await Coindetail(id.uid, currencyUid);
     setCoinDetails(response);
-    console.log(response ,'response')
+    console.log(response, "response");
     if (response.status === "success") {
       setCoinName(response.data.coin.name);
       setCryptoCoinPrice(response.data.coin.price);
@@ -269,9 +271,6 @@ const CoinDetail = () => {
       />
       {CoinDetails.status === "success" ? (
         <>
-          {/* {console.log(CoinName, "namhe")} */}
-          {/* {console.log(CoinDetails.data.coin.name, "name")} */}
-
           <div className="breadcrumb container mt-5">
             <Breadcrumbs aria-label="breadcrumb">
               <Link
@@ -662,7 +661,7 @@ const CoinDetail = () => {
               <div className="info col-4">
                 <h4>info</h4>
                 <div
-                id="info_table"
+                  id="info_table"
                   className="info_table d-flex"
                   style={{ flexDirection: "column" }}
                 >
@@ -697,40 +696,6 @@ const CoinDetail = () => {
               </div>
             </div>
             <hr />
-
-            {/* <div className="nav-link w-80 mt-5">
-              <Nav className="d-flex gap-4">
-                <div
-                  className="link1 link"
-                  style={{ cursor: "pointer" }}
-                  onClick={overview}
-                >
-                  <h6>
-                    <link rel="stylesheet" href="#overview" /> Overview
-                  </h6>
-                </div>
-                <div
-                  className="link1"
-                  style={{ cursor: "pointer" }}
-                  onClick={market}
-                >
-                  <h6>
-                    {" "}
-                    <link rel="stylesheet" href="#market" />
-                    Rank History
-                  </h6>
-                </div>
-                <div
-                  className="link1"
-                  style={{ cursor: "pointer" }}
-                  onClick={history}
-                >
-                  <h6>
-                    <link rel="stylesheet" href="#history" /> History Data
-                  </h6>
-                </div>
-              </Nav>
-            </div> */}
 
             <div
               className="d-flex gap-5 mt-5"
@@ -775,12 +740,11 @@ const CoinDetail = () => {
                       />{" "}
                     </>
                   ) : (
-                    <>loader</>
+                    <>
+                      <CircularProgress />
+                    </>
                   )}
-                  {/* */}
                 </div>
-
-                {/* {console.log(timechart.data, "er")} */}
               </div>
 
               <div className="bitconvertor col-5 mt-5">
@@ -795,7 +759,6 @@ const CoinDetail = () => {
             <div className="d-flex gap-5 mt-5 desprice">
               <div className="des col-7">
                 {" "}
-                {/* {console.log(CoinDetails, "er")}{" "} */}
                 <h4>{`What is ${CoinDetails.data.coin.name} ?`}</h4>
                 <div className="summary">
                   <p>{CoinDetails.data.coin.description}</p>
@@ -1021,13 +984,23 @@ const CoinDetail = () => {
                   </Button> */}
                 </>
               ) : (
-                <>loader</>
+                <>
+                  <CircularProgress />
+                </>
               )}
             </div>
           </div>
+          <Footer />
         </>
       ) : (
-        <>loader</>
+        <>
+          <div
+            className="loader"
+            style={{ height: "80vh", position: "relative" }}
+          >
+            <CircularProgress  />
+          </div>
+        </>
       )}
     </>
   );

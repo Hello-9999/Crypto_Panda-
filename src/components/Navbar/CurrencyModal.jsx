@@ -1,6 +1,7 @@
 import { Box, Button, Modal, TextField, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const CurrencyModal = ({
   openModal,
@@ -8,8 +9,6 @@ const CurrencyModal = ({
   setcurrencyUid,
   setcurrencySign,
   setButtonSign,
-  setcurrencyName,
-  setcurrencySymbol,
 }) => {
   const [Currency, setCurrency] = useState([]);
   const [Currencysign, setCurrencysign] = useState([]);
@@ -20,7 +19,6 @@ const CurrencyModal = ({
     );
     setCurrencysign(response.data.data.currencies);
     setNcurrencySign(response.data.data.currencies);
-
     setCurrency(response.data);
 
     return response.data;
@@ -28,9 +26,6 @@ const CurrencyModal = ({
 
   const handleSearch = (value) => {
     const searchvalue = value.toLowerCase();
-    // console.log(Currencysign, "sign");
-    // console.log(searchvalue);
-
     const search = Currencysign.filter((check) => {
       const coinname = check.name.toLowerCase().includes(searchvalue);
       const coinsymbol = check.symbol.toLowerCase().includes(searchvalue);
@@ -43,13 +38,6 @@ const CurrencyModal = ({
     e.preventDefault();
     setopenModal(false);
     setcurrencyUid(value.uuid);
-    setcurrencyName(value.name);
-    setcurrencySymbol(value.symbol);
-
-    // console.log(value.uuid, "value");
-    // console.log(value.sign, "sign");
-    console.log(value, "details");
-
     if (value.sign === null) {
       setcurrencySign(value.symbol);
       setButtonSign(value.symbol);
@@ -84,7 +72,6 @@ const CurrencyModal = ({
       {" "}
       <div>
         {" "}
-        {/* {console.log(Currency.data, "curre")} */}
         {Currency.status === "success" ? (
           <>
             {" "}
@@ -141,7 +128,9 @@ const CurrencyModal = ({
             </Modal>
           </>
         ) : (
-          <>loader</>
+          <>
+            <CircularProgress />
+          </>
         )}
       </div>
     </>

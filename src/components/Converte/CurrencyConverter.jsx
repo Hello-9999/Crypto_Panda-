@@ -41,30 +41,20 @@ const CurrencyConverter = ({
   const openModal = (e) => {
     e.preventDefault();
     setopen(true);
-    // console.log("clicked");
   };
-  // console.log(CryptoConverterprice, "pricesd");
-  // console.log(CurencyIcon, "ctrruwnct detaiil");
+
   const getcoinpricec = async () => {
     const response = await CryptoConverter();
     if (Support === true) {
       setcoinprice(response[`${Coinsymbol}`]);
       setCryptoCoinPrice(response[`${Coinsymbol}`]);
-      // console.log(response[`${Coinsymbol}`], "cyrrency");
       setError(response);
     } else {
       setcoinprice("$");
     }
 
-    // setCryptoCoinPrice(response[`${Coinsymbol}`]);
-    // console.log(response, "price");
-
-    // return response;
   };
-  // console.log(CryptoCurrencyID, "Currency ID");
-  // console.log(Error,'check error')
-  // console.log(Support, "check sup[[ort");
-  // console.log(id.uid, "id");
+
 
   const Currency_Url = import.meta.env.VITE_CURRENCY;
   const getCurrency = async () => {
@@ -74,16 +64,13 @@ const CurrencyConverter = ({
       setcurency(response.data);
       console.log(response, "currency");
     } catch (error) {
-      // console.log(error, "error");
     }
-    // return response;
   };
 
   const Convertcoin = async () => {
     const response = await CryptoConverter(id, CryptoCurrencyID);
     console.log(response, "re");
 
-    // console.log(response.data, "crypto currency");
     setCryptoConverterprice(response.data.data.coin.price);
     setCryptoCoinPrice(response.data.data.coin.price);
     setCryptoConverterdata(response.data);
@@ -98,14 +85,13 @@ const CurrencyConverter = ({
     Convertcoin();
   }, [CryptoCurrencyID]);
 
-  // console.log(Currency.status, "curency");
 
   return (
     <>
       <div className="">
         {CryptoConverterdata.status === "success" ? (
           <>
-            <Card sx={{ width: "80%", padding: "10px", margin: "auto" }}>
+            <Card sx={{ width: "80%", padding: "10px", margin: "auto" }} id="Converter_Box">
               <CardContent>
                 <Typography variant="h5" component="div">
                   {CoinDetails.data.coin.name + "  Converter"}

@@ -15,7 +15,7 @@ const Accordionlist = () => {
           <div className="title">
             <h6>Popular questions</h6>
           </div>{" "}
-          <Accordion className="mt-5 ">
+          <Accordion className="mt-5 " id="accor">
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
@@ -36,7 +36,7 @@ const Accordionlist = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion className="mt-2 ">
+          <Accordion className="mt-2 " id="accor">
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel2a-content"
@@ -58,7 +58,7 @@ const Accordionlist = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion className="mt-2 ">
+          <Accordion className="mt-2 "id="accor">
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel2a-content"

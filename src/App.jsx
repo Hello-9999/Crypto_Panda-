@@ -53,7 +53,7 @@ function App() {
 
       
       <ToastContainer />
-      <Footer />
+      {/* <Footer /> */}
     </>
     // </PayPalScriptProvider>
   );

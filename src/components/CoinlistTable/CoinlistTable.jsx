@@ -36,7 +36,6 @@ import { CircularProgress } from "@mui/material";
 
 const CoinlistTable = ({ currencyUid, currencySign }) => {
   const favroatedata = useSelector((state) => state.Favorite_List);
-  console.log(favroatedata.favlist, "dataasd");
   const [Coinlist, setCoinlist] = useState([]);
   const [Coindata, setCoindata] = useState([]);
   const [SevenCoindata, setsevenCoindata] = useState([]);
@@ -62,13 +61,16 @@ const CoinlistTable = ({ currencyUid, currencySign }) => {
     // return response;
   };
 
+  // alert(currencySign)
+  console.warn(currencySign)
+
   const test = async (uuid, e) => {
     e.preventDefault();
     navigate(`/coindetail/${uuid}`);
   };
 
   // const favitem = useSelector(state)
-  console.log(Logindetails, "login");
+  // console.log(Logindetails, "login");
 
   const addFavorite = (e, coindetail, index, already) => {
     e.preventDefault();
@@ -174,7 +176,7 @@ const CoinlistTable = ({ currencyUid, currencySign }) => {
                   </TableHead>
                   <TableBody>
                     {Coinlist.map((coin, index) => {
-                      console.log(coin.sparkline, "uuid");
+                      // console.log(coin.sparkline, "uuid");
                       // const favstore = favroatedata.favlist.filter((check) => {
                       //   return check.uuid === coin.uuid;
                       // });
@@ -182,6 +184,9 @@ const CoinlistTable = ({ currencyUid, currencySign }) => {
                         return check.uuid === coin.uuid;
                       });
                       // console.log(favstore,'store')
+
+
+                      // console.log(coin,'c')
 
                       return (
                         <>
@@ -363,7 +368,7 @@ const CoinlistTable = ({ currencyUid, currencySign }) => {
                             <TableCell className="col-2">
                               <div className="sparkline">
                                 {" "}
-                                {console.log("coin.sparkline", coin.sparkline)}
+                                {/* {console.log("coin.sparkline", coin.sparkline)} */}
                                 {coin.change.match("-") ? (
                                   <>
                                     <Stack
