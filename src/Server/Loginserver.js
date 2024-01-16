@@ -3,13 +3,13 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCWdp6bduCHsY3h5LBIA2heXHQYRTOmitE",
-  authDomain: "cryptopanda-3f268.firebaseapp.com",
-  projectId: "cryptopanda-3f268",
-  storageBucket: "cryptopanda-3f268.appspot.com",
-  messagingSenderId: "917484567768",
-  appId: "1:917484567768:web:388d4e49ce35d8c9ee6bad",
-  measurementId: "G-S52ED7ZZGL"
+  apiKey: import.meta.env.VITE_LOGIN_API_KEY,
+  authDomain:import.meta.env.VITE_Auth_Domain,
+  projectId: import.meta.env.VITE_Project_Id,
+  storageBucket: import.meta.env.VITE_Storage_Bucket,
+  messagingSenderId: import.meta.env.VITE_Messaging_SenderID,
+  appId: import.meta.env.VITE_APPID,
+  measurementId:import.meta.env.VITE_Mesurment_ID
 };
 
 const app = initializeApp(firebaseConfig);
