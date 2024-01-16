@@ -78,11 +78,14 @@ const Bar = ({
     e.preventDefault();
     setopenModal(true);
   };
+  const handleNavportfolio =(e)=>{
+    e.preventDefault();
+    navigate('/favorites')
+  }
   useEffect(() => {
     getSearchSuggest();
   }, [searchvalue]);
 
-  console.log(Logindetails, "details");
 
   return (
     <>
@@ -147,7 +150,7 @@ const Bar = ({
                       id="navDropdown"
                       className="mx-3"
                     >
-                      <NavDropdown.Item href="/favorites" >
+                      <NavDropdown.Item  onClick={handleNavportfolio}>
                         Portfolio
                       </NavDropdown.Item>
                       <NavDropdown.Item href="/alert">

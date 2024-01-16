@@ -31,6 +31,9 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { signOut } from "firebase/auth";
+import { auth } from "../../Server/Loginserver";
+import { successtoast } from "../../Services/toastify";
 
 const Home1 = () => {
   // console.log(CryptoImage,'er')
@@ -48,6 +51,20 @@ const Home1 = () => {
     e.preventDefault();
     console.log("first");
     navigate("/login");
+  };
+
+  const handleSignoutbtn = (e) => {
+    e.preventDefault();
+
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        successtoast("Sign-out success !!  see you  next time. 😊👋");
+        console.log(auth)
+      })
+      .catch((error) => {
+        // An error happened.
+      });
   };
   return (
     <>
@@ -83,9 +100,22 @@ const Home1 = () => {
                   <Nav.Link href="#about">About</Nav.Link>
                   <Nav.Link href="#service">Feature</Nav.Link>
                 </Nav>
-                <Button className="mx-3" onClick={loginButton}>
-                  {Login.isLoggedin ? <>Sign Out</> : <>Login</>}{" "}
-                </Button>
+
+                {Login.isLoggedin ? (
+                  <>
+                    <Button className="mx-3" onClick={handleSignoutbtn}>
+                      {" "}
+                      Sign Out{" "}
+                    </Button>{" "}
+                  </>
+                ) : (
+                  <>
+                    <Button className="mx-3" onClick={loginButton}>
+                      {" "}
+                      Login{" "}
+                    </Button>
+                  </>
+                )}
               </Navbar.Collapse>
             </Container>
           </Navbar>
