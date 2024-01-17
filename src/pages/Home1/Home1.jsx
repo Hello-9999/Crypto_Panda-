@@ -59,8 +59,9 @@ const Home1 = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
+        window.localStorage.clear();
+        window.location.reload();
         successtoast("Sign-out success !!  see you  next time. 😊👋");
-        console.log(auth)
       })
       .catch((error) => {
         // An error happened.
