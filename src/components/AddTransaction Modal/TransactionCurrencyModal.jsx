@@ -71,7 +71,7 @@ const TransactionCurrencyModal = ({
               {CurrencyList1.length === 0 ? (
                 <>
                   {" "}
-                  <h6>No Cyuurency</h6>{" "}
+                  <h6>No Curency</h6>{" "}
                 </>
               ) : (
                 <>

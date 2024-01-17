@@ -36,7 +36,11 @@ import StarIcon from "@mui/icons-material/Star";
 import { favoriteList, removeitem } from "../../slice/AddtoFavorite";
 import Star from "@mui/icons-material/Star";
 import BuyModel from "./BuyModel";
-import { successtoast, warningtoast } from "../../Services/toastify";
+import {
+  errortoast,
+  successtoast,
+  warningtoast,
+} from "../../Services/toastify";
 import CircularProgress from "@mui/material/CircularProgress";
 import Footer from "../../components/Footer/Footer";
 
@@ -257,8 +261,20 @@ const CoinDetail = () => {
     getNews();
   }, [CoinName]);
 
-  const handlebuy = () => {
-    sethandleModel(true);
+  const loginInfo = useSelector((state) => state.Login_Details);
+
+  console.log(loginInfo.isLoggedin, "info");
+
+  const handlebuy = (e) => {
+    e.preventDefault();
+
+    if (loginInfo.isLoggedin === false) {
+      errortoast(
+        "🛒 To complete your purchase, please log in or create an account. It's quick and easy! Don't miss out on exclusive offers. 💻🔒    "
+      );
+    } else {
+      sethandleModel(true);
+    }
   };
 
   return (
@@ -998,7 +1014,7 @@ const CoinDetail = () => {
             className="loader"
             style={{ height: "80vh", position: "relative" }}
           >
-            <CircularProgress  />
+            <CircularProgress />
           </div>
         </>
       )}

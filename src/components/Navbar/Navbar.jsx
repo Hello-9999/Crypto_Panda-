@@ -78,10 +78,38 @@ const Bar = ({
     e.preventDefault();
     setopenModal(true);
   };
+
   const handleNavportfolio =(e)=>{
     e.preventDefault();
     navigate('/favorites')
   }
+
+  const coinlist =(e)=>{
+    e.preventDefault();
+    navigate('/coinlist')
+  }
+  const newcoin =(e)=>{
+    e.preventDefault();
+    navigate('/new-coin')
+  }
+
+  const gainloosecoin =(e)=>{
+    e.preventDefault();
+    navigate('/crypto-gainers-losers')
+  }
+
+  const alertcoin =(e)=>{
+    e.preventDefault();
+    navigate('/alert')
+  }
+
+  const handlelogo =(e)=>{
+    e.preventDefault();
+
+    navigate('/')
+
+  }
+
   useEffect(() => {
     getSearchSuggest();
   }, [searchvalue]);
@@ -100,7 +128,7 @@ const Bar = ({
           style={{ backgroundColor: "#35353c", color: "aliceblue" }}
         >
           <Container>
-            <Navbar.Brand href="#">
+            <Navbar.Brand onClick={handlelogo} style={{cursor:'pointer'}}>
               {" "}
               <h6 className="logo">
                 <span> Crypto</span>
@@ -114,9 +142,9 @@ const Bar = ({
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link href="/">Coins</Nav.Link>
-                <Nav.Link href="/new-coin">New Coins</Nav.Link>
-                <Nav.Link href="/crypto-gainers-losers">
+                <Nav.Link  onClick={coinlist}>Coins</Nav.Link>
+                <Nav.Link onClick={newcoin}>New Coins</Nav.Link>
+                <Nav.Link onClick={gainloosecoin}>
                   Gainers & Losers
                 </Nav.Link>
                 {/* <Nav.Link href="#action4">News</Nav.Link> */}
@@ -153,13 +181,12 @@ const Bar = ({
                       <NavDropdown.Item  onClick={handleNavportfolio}>
                         Portfolio
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="/alert">
+                      <NavDropdown.Item onClick={alertcoin}>
                         price alert
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
 
-                      <NavDropdown.Item href="#action5">
-                        {" "}
+                      <NavDropdown.Item >
                         {Logindetails.isLoggedin ? (
                           <>
                             {" "}
